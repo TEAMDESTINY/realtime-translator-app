@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
+import 'core/theme/app_theme.dart';
 import 'features/auth/login_screen.dart';
 
 void main() {
-  runApp(const App());
+  runApp(const TranslatorApp());
 }
 
-class App extends StatelessWidget {
-  const App({super.key});
+class TranslatorApp extends StatelessWidget {
+  const TranslatorApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Translator',
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: AppTheme.lightTheme,
       home: const LoginScreen(),
     );
   }
