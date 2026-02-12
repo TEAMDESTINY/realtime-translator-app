@@ -1,9 +1,7 @@
-from fastapi import APIRouter
-from services.translate import translate_text
+from googletrans import Translator
 
-router = APIRouter(prefix="/translate")
+translator = Translator()
 
-@router.get("/")
-def translate_api(text: str, lang: str):
-    result = translate_text(text, lang)
-    return {"translated": result}
+def translate_text(text, lang):
+    translated = translator.translate(text, dest=lang)
+    return translated.text
