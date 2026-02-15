@@ -2,3 +2,4 @@ http: ^1.2.0
 speech_to_text: ^6.6.0
 flutter_tts: ^3.8.0
 provider: ^6.0.5
+google_fonts: ^6.3.0
